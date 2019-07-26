@@ -1,18 +1,31 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>The Home Page</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+          asperiores, aut autem, blanditiis consequuntur dolore excepturi
+          laborum maiores minima nihil non nulla obcaecati quas quibusdam quod
+          sed suscipit vero voluptatem.
+        </p>
+        <button class="btn btn-primary" @click="navigateToUser">
+          Go to User Page
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "home",
-  components: {
-    HelloWorld
+
+  methods: {
+    navigateToUser() {
+      this.$router.push("/user/" + 25);
+    }
   }
 };
 </script>
