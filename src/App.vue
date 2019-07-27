@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <component :is="'app-nav-bar'" :userId="userId" />
+    <component :is="'app-nav-bar'" />
 
     <router-view />
   </div>

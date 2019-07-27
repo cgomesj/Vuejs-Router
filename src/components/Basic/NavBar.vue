@@ -27,17 +27,7 @@
 
 <script>
 export default {
-  name: "NavBar",
-
-  props: {
-    userId: Number
-  },
-
-  computed: {
-    toUser() {
-      return "/user/" + this.userId;
-    }
-  }
+  name: "NavBar"
 };
 </script>
 
