@@ -2,7 +2,7 @@
   <div class="col">
     <h3>Some User Details</h3>
     <p>User Id: {{ id }}</p>
-    <router-link tag="button" class="btn btn-secondary" :to="userIdEdit"
+    <router-link tag="button" class="btn btn-secondary" :to="toEditUser"
       >Edit User</router-link
     >
   </div>
@@ -13,11 +13,12 @@ export default {
   props: { id: [String, Number] },
 
   computed: {
-    userIdEdit() {
+    toEditUser() {
       return {
         name: "userEdit",
         params: { id: this.id },
-        query: { locale: "br", timezone: "sp" }
+        query: { locale: "br", timezone: "sp" },
+        hash: "#someText"
       };
     }
   }

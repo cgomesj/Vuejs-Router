@@ -7,5 +7,7 @@
     <router-link tag="button" class="btn btn-light" :to="{ name: 'userDetail' }"
       >Back to User Details</router-link
     >
+    <div style="height: 700px"></div>
+    <p id="someText">Some text</p>
   </div>
 </template>
