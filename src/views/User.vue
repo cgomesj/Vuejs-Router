@@ -8,8 +8,9 @@
         </button>
 
         <hr />
-
-        <router-view class="my-3"></router-view>
+        <transition name="fade" mode="out-in">
+          <router-view class="my-3"></router-view>
+        </transition>
       </div>
     </div>
   </div>

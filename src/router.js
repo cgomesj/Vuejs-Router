@@ -8,6 +8,7 @@ export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes: [
+    { path: "*", redirect: { name: "error404" } },
     { path: "/redirect-me", redirect: { name: "home" } },
     {
       path: "/",
@@ -41,6 +42,11 @@ export default new Router({
           component: () => import("./components/User/UserEdit.vue")
         }
       ]
+    },
+    {
+      path: "/404",
+      name: "error404",
+      component: () => import("./components/Basic/Error404.vue")
     }
   ]
 });
