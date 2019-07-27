@@ -10,7 +10,7 @@
           laborum maiores minima nihil non nulla obcaecati quas quibusdam quod
           sed suscipit vero voluptatem.
         </p>
-        <button class="btn btn-primary" @click="navigateToUser">
+        <button class="btn btn-success" @click="navigateToUser">
           Go to User Page
         </button>
       </div>

@@ -1,5 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3" id="nav">
+  <nav
+    class="navbar fixed-top navbar-expand-sm navbar-light bg-light mb-3"
+    id="nav"
+  >
     <button
       class="navbar-toggler"
       type="button"
