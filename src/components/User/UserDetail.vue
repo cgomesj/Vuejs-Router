@@ -14,7 +14,11 @@ export default {
 
   computed: {
     userIdEdit() {
-      return { name: "userEdit", params: { id: this.id } };
+      return {
+        name: "userEdit",
+        params: { id: this.id },
+        query: { locale: "br", timezone: "sp" }
+      };
     }
   }
 };
