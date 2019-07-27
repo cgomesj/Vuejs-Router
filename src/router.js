@@ -1,8 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap.css";
 
 Vue.use(Router);
 
@@ -43,7 +41,11 @@ const routes = [
         path: ":id",
         name: "userDetail",
         props: true,
-        component: () => import("./components/User/UserDetail.vue")
+        component: () => import("./components/User/UserDetail.vue"),
+        beforeEnter: (to, from, next) => {
+          console.log("inside user details route");
+          next();
+        }
       },
       {
         path: ":id/edit",
@@ -59,9 +61,16 @@ const routes = [
   }
 ];
 
-export default new Router({
+const router = new Router({
   mode: "history",
-  scrollBehavior,
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior
 });
+
+router.beforeEach((to, from, next) => {
+  console.log("Global before each");
+  next();
+});
+
+export default router;
