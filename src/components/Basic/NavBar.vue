@@ -18,7 +18,10 @@
           <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="toUser" class="nav-link">User</router-link>
+          <router-link to="/user/1" class="nav-link">User 1</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/user/2" class="nav-link">User 2</router-link>
         </li>
       </ul>
     </div>
@@ -32,6 +35,7 @@ export default {
   props: {
     userId: Number
   },
+
   computed: {
     toUser() {
       return "/user/" + this.userId;

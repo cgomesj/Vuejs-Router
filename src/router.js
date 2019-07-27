@@ -16,6 +16,7 @@ export default new Router({
     {
       path: "/user/:id",
       name: "user",
+      props: true,
 
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route

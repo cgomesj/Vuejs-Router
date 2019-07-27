@@ -24,7 +24,7 @@ export default {
 
   methods: {
     navigateToUser() {
-      this.$router.push("/user/" + 25);
+      this.$router.push("/user/" + 191);
     }
   }
 };

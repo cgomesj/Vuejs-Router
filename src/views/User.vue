@@ -10,11 +10,10 @@
 export default {
   name: "User",
 
-  data() {
-    return {
-      id: this.$route.params.id
-    };
+  props: {
+    id: String
   },
+
   methods: {
     navigateToHome() {
       this.$router.push("/");
