@@ -14,7 +14,7 @@ export default new Router({
       component: Home
     },
     {
-      path: "/user/:id",
+      path: "/user",
       name: "user",
       props: true,
 
@@ -22,7 +22,23 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/User.vue")
+        import(/* webpackChunkName: "about" */ "./views/User.vue"),
+
+      children: [
+        {
+          path: "",
+          component: () => import("./components/User/UserStart.vue")
+        },
+        {
+          path: ":id",
+          props: true,
+          component: () => import("./components/User/UserDetail.vue")
+        },
+        {
+          path: ":id/edit",
+          component: () => import("./components/User/UserEdit.vue")
+        }
+      ]
     }
   ]
 });

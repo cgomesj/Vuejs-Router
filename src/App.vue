@@ -14,12 +14,6 @@ export default {
 
   components: {
     "app-nav-bar": NavBar
-  },
-
-  data() {
-    return {
-      userId: 191
-    };
   }
 };
 </script>
