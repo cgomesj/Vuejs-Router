@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <component :is="'app-nav-bar'" />
+    <!-- <component :is="'app-nav-bar'" /> -->
 
+    <router-view name="header-top" />
     <router-view />
+    <router-view name="header-bottom" />
   </div>
 </template>
 

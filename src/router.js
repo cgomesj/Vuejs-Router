@@ -11,12 +11,17 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      components: {
+        default: Home,
+        "header-top": () => import("./components/Basic/NavBar.vue")
+      }
     },
     {
       path: "/user",
-      component: () => import("./views/User.vue"),
-
+      components: {
+        default: () => import("./views/User.vue"),
+        "header-bottom": () => import("./components/Basic/NavBar.vue")
+      },
       children: [
         {
           path: "",
